@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Precios | CycleLab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="precios">
+<div id="siteHeader"></div>
+<main>
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="crumb"><a href="index.html">Inicio</a> / Precios</p>
+      <h1>Cuánto vas a pagar</h1>
+      <p>El precio se compone de cuatro partes: alquiler, envío, depósito (solo personas) y, si corresponde, recargos o multas al devolver. Prueba la calculadora con tu caso.</p>
+    </div>
+    <div class="price-layout">
+      <div>
+        <div class="rulebox">
+          <h3>Cómo se calcula</h3>
+          <div class="rule-row"><span>Alquiler</span><b>Tarifa por día × unidades × días</b></div>
+          <div class="rule-row"><span>Día de alquiler</span><b>24 horas desde la entrega firmada</b></div>
+          <div class="rule-row"><span>Descuento por volumen</span><b>Solo empresas: 10% / 15%</b></div>
+          <div class="rule-row"><span>Envío (ida y vuelta)</span><b>Por zona, una vez por pedido</b></div>
+          <div class="rule-row"><span>Depósito</span><b>30% del valor, solo personas</b></div>
+        </div>
+        <div class="rulebox">
+          <h3>Zonas de entrega</h3>
+          <div class="rule-row"><span>Zona 1: San Salvador centro</span><b>$3.00</b></div>
+          <div class="rule-row"><span>Zona 2: área metropolitana</span><b>$5.00</b></div>
+          <div class="rule-row"><span>Zona 3: resto del departamento</span><b>$8.00</b></div>
+          <div class="rule-row"><span>Cancelación gratis</span><b>Hasta 24 horas antes</b></div>
+          <div class="rule-row"><span>Cancelación tardía</span><b>Se cobra 1 día de alquiler</b></div>
+        </div>
+      </div>
+      <div class="calc" id="calc">
+        <h3>Calculadora de alquiler</h3>
+        <p class="hint">Todos los montos en dólares. Es una estimación: el total final se confirma en la solicitud.</p>
+        <div class="presets">
+          <button class="chipbtn" data-preset="a">Ejemplo: persona, 1 laptop, 3 días</button>
+          <button class="chipbtn" data-preset="b">Ejemplo: empresa, 8 routers, 10 días</button>
+          <button class="chipbtn" data-preset="c">Ejemplo: devolución con retraso y daño</button>
+        </div>
+        <div class="cform">
+          <div class="field"><label for="cType">Tipo de cliente</label>
+            <select id="cType"><option value="ind">Individual</option><option value="corp">Corporativo</option></select></div>
+          <div class="field"><label for="cEq">Equipo</label><select id="cEq"></select></div>
+          <div class="field"><label for="cQty">Unidades</label><input id="cQty" type="number" min="1" value="1"></div>
+          <div class="field"><label for="cDays">Días de alquiler</label><input id="cDays" type="number" min="1" value="3"></div>
+          <div class="field full"><label for="cZone">Zona de entrega</label>
+            <select id="cZone"><option value="3">Zona 1: San Salvador centro</option><option value="5">Zona 2: área metropolitana</option><option value="8">Zona 3: resto del departamento</option></select></div>
+          <div class="calc-sep">Al devolver (opcional)</div>
+          <div class="field"><label for="cLate">Días de retraso</label><input id="cLate" type="number" min="0" value="0"></div>
+          <div class="field"><label for="cDmg">Daño encontrado</label>
+            <select id="cDmg"><option value="0">Ninguno</option><option value="0.10">Leve (10% del valor)</option><option value="0.35">Moderado (35% del valor)</option><option value="0.80">Grave (80% del valor)</option><option value="1">Pérdida o robo (100%)</option></select></div>
+          <div class="field"><label for="cDmgU">Unidades afectadas</label><input id="cDmgU" type="number" min="0" value="0"></div>
+        </div>
+        <div class="warnmsg" id="cWarn" role="alert"></div>
+        <div class="result" id="cResult"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="siteFooter"></div>
+<script src="app.js"></script>
+</body>
+</html>

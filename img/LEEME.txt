@@ -1,0 +1,9 @@
+Las imagenes actuales vienen de Pexels (licencia gratuita) y se cargan por internet.
+Para usar las tuyas, guardalas aqui y cambia el src en el HTML por img/NOMBRE:
+hero.jpg       - index.html          (recomendado 1200 x 900)
+catalogo.jpg   - catalogo.html       (1200 x 450)
+inspeccion.jpg - multas.html         (1200 x 525)
+entrega.jpg    - entrega.html        (1200 x 900)
+panel.jpg      - panel.html          (1600 x 800)
+logo.png          - logo del instituto, pie de pagina (ya incluido)
+cyclelab-logo.png - simbolo de CycleLab, junto al nombre (ya incluido)

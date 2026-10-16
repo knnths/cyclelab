@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Panel de bodega | CycleLab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="panel">
+<div id="siteHeader"></div>
+<main>
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="crumb"><a href="index.html">Inicio</a> / Panel</p>
+      <h1>Lo que ve el equipo de bodega cada día</h1>
+      <p>Un tablero con las entregas del día, lo que está por vencer y lo que está pendiente de cobro. Haz clic en una tarjeta, un filtro o una fila para explorarlo.</p>
+    </div>
+    <div class="dash">
+      <div class="dash-top"><h3>Resumen de operación</h3><span class="pill ok">Datos de ejemplo</span></div>
+      <div class="dash-stats">
+        <button class="dstat" data-f="all"><span>Alquileres abiertos</span><strong>46</strong></button>
+        <button class="dstat" data-f="Entrega"><span>Entregas de hoy</span><strong>7</strong></button>
+        <button class="dstat" data-f="Recogida"><span>Recogidas de hoy</span><strong>5</strong></button>
+        <button class="dstat" data-f="Vencido"><span>Vencidos</span><strong class="bad">3</strong></button>
+        <button class="dstat" data-f="Multa"><span>Multas por cobrar</span><strong class="fine">$184</strong></button>
+      </div>
+      <div class="dfilters" id="dFilters">
+        <button class="chipbtn on" data-f="all">Todos</button>
+        <button class="chipbtn" data-f="Entrega">Entrega hoy</button>
+        <button class="chipbtn" data-f="Recogida">Recogida hoy</button>
+        <button class="chipbtn" data-f="Vencido">Vencidos</button>
+        <button class="chipbtn" data-f="Multa">Con multa</button>
+      </div>
+      <div class="tablewrap" style="border:0;border-radius:0">
+        <table id="dTable">
+          <thead><tr><th>Alquiler</th><th>Cliente</th><th>Equipo</th><th>Zona</th><th>Estado</th><th>Monto</th></tr></thead>
+          <tbody id="dBody"></tbody>
+        </table>
+      </div>
+      <p class="dash-foot">Cada fila abre el detalle del alquiler: horario, repartidor y observaciones.</p>
+    </div>
+    <img class="pic r168" src="https://images.pexels.com/photos/4484155/pexels-photo-4484155.jpeg?auto=compress&cs=tinysrgb&w=1200" loading="lazy" alt="Empleado de bodega revisando inventario con una tablet" style="margin-top:22px">
+  </div>
+</section>
+
+</main>
+<div id="siteFooter"></div>
+<script src="app.js"></script>
+</body>
+</html>
